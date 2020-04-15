@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+
+    web:
+
+        build: .
+
+        command: python /docker_projects/manage.py runserver 0.0.0.0:8000
+
+        volumes:
+            - .:/docker_projects
+
+        ports:
+            - 8000:8000
